@@ -18,7 +18,7 @@ Given a list of source videos, each with its duration **T**, and an ad sequence 
 ```terminal
 git clone https://github.com/lochappy/video_sequence_arrangement.git
 ```
-**_Step 2_** - To run the unitest, in your terminal, input this command line.
+**_Step 2_** - To run the unittest, in your terminal, input this command line.
 ```terminal
 python3 test_video_sequence_arrangement.py
 ```
