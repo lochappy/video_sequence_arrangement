@@ -19,6 +19,13 @@ def foobar(video_list, sequence, start_index=0, list_of_prev_videos=[]):
 
             output: return the list of possible locations of the video list in the sequence
     '''
+    # if total length of the video is greater than the sequence, return []
+    total_length = 0
+    for video in video_list:
+        total_length += video[1]
+    if total_length > len(sequence):
+        return []
+
     # base case: empty video list or sequence
     if len(video_list) == 0 or len(sequence) == 0:
         return []
@@ -65,7 +72,12 @@ if __name__ == "__main__":
     possible_locations = foobar(video_list, sequence)
 
     # print out the result.
-    print('\n###### Possible arrangement #######\n')
-    for pos in possible_locations:
-        print(pos)
-    print('\n##################################\n')
+    if possible_locations:
+        print('\n###### Possible arrangement #######\n')
+        for pos in possible_locations:
+            print(pos)
+        print('\n##################################\n')
+    else:
+        print('\n##################################')
+        print('## No possible arrangement found #')
+        print('##################################\n')
