@@ -26,6 +26,11 @@ python3 test_video_sequence_arrangement.py
 ```terminal
 python3 video_sequence_arrangement.py -s ./data/sequence_of_scenes.txt -v ./data/video_list.txt
 ```
+## <b>III. Assumptions</b>
+- To maintain the order of the video, I assumpt that the format of video list is a list of tuple.
+- The algorithm will return empty arrangment when
+  - Total length of the video in video list is longer than the sequence of scenes.
+  - The input is empty video list or empty sequence
 
-## <b>III. Authors</b>
+## <b>IV. Authors</b>
 - Loc Truong <ttanloc@gmail.com>
