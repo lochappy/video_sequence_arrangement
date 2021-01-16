@@ -16,7 +16,7 @@ Given a list of source videos, each with its duration **T**, and an ad sequence 
  ## <b>II. Getting started</b>
  **_Step 1_** - To clone the repository, in your terminal, input this command line.
 ```terminal
-git clone https://github.com/lochappy/video_sequence_arrangement.git
+git clone https://github.com/lochappy/video_sequence_arrangement.git && cd video_sequence_arrangement
 ```
 **_Step 2_** - To run the unittest, in your terminal, input this command line.
 ```terminal
