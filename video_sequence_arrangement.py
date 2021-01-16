@@ -8,14 +8,14 @@ Usage:
 
 from argparse import ArgumentParser
 
-def foobar(video_list, sequence, start_index=0, list_of_prev_videos=[]):
+def foobar(video_list, sequence, start_index=0, list_of_selected_videos=[]):
     '''
-    This function arranges the list of video to the sequence.
+    This function arranges the list of videos to the sequence.
     @param: 
-            input:  video_list: list of video, in the form of [(Name0,length0), (Name1,length1)...]
+            input:  video_list: list of videos, in the form of [(Name0,length0), (Name1,length1)...]
                     sequence: list of sequence of scenes, in form of [True, False, True...]
                     start_index: start index location of the current sequence.
-                    list_of_prev_videos: list of the videos included in the previous iteration
+                    list_of_selected_videos: list of the videos included in the previous iteration
 
             output: return the list of possible locations of the video list in the sequence
     '''
@@ -37,14 +37,14 @@ def foobar(video_list, sequence, start_index=0, list_of_prev_videos=[]):
         possible_postions_of_last_video = []
         for index in range(start_index,len(sequence)):
             if sequence[index] and (index + curr_video_len) <=len(sequence):
-                possible_postions_of_last_video.append(list_of_prev_videos + [(curr_video_name, index)])
+                possible_postions_of_last_video.append(list_of_selected_videos + [(curr_video_name, index)])
         return possible_postions_of_last_video
     
-    # Normal case: there are more than one video in the list
+    # Normal cases: there are more than one video in the list
     possible_postions_of_videos = []
     for index in range(start_index,len(sequence)):
         if sequence[index] and (index + curr_video_len)<=len(sequence):
-            new_possible_locations = foobar(video_list[1:], sequence, index + curr_video_len, list_of_prev_videos + [(curr_video_name, index)])
+            new_possible_locations = foobar(video_list[1:], sequence, index + curr_video_len, list_of_selected_videos + [(curr_video_name, index)])
             possible_postions_of_videos = possible_postions_of_videos + new_possible_locations
     return possible_postions_of_videos
 
