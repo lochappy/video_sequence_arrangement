@@ -6,10 +6,10 @@ Given a list of source videos, each with its duration **T**, and an ad sequence 
 
 ## <b>II. Directory Structure</b>
  - `./data` : contains the sample data to test the algorithm. There are 2 text files in this folder:
-    - `sequence_of_scenes.txt`: this file contains the sequence of scenes.
+    - `sequence_of_scenes.txt`: this file contains the sequence of scenes, in the form of `[T,F,T,F,F,T,T....]`
     - `video_list.txt`: this file contains the list of of the videos. Each row of this file describes a video by its name and length.
  - `./images` : contains the random images for this README file
- - `Pencil_AI_Task_v3.pdf`: this is the prompt describing this tasks.
+ - `Pencil_AI_Task_v3.pdf`: this is the problem statement describing this task.
  - `video_sequence_arrangement.py`: this is the Python implementation of the algorithm, specifically the `foobar` function. This script also demonstrates the algorithm with the data in the `data` folder.
  - `test_video_sequence_arrangement.py`: : this is the unittest implementation of the algorithm.
  
