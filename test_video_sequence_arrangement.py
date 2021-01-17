@@ -52,10 +52,10 @@ class TestFoobar(unittest.TestCase):
     def test_video_longer_than_sequence(self):
         '''
         Test: 
-            input          : single video list, the lenght of the video is longer than the sequence
+            input          : single-element video list, the lenght of the video is longer than the sequence
             expected output: empty list
         '''
-        video_list = [('A',8)]
+        video_list = [('A',10)]
         sequence = [False, True, False, True, False, True, False , False]
 
         exptected_output = []
