@@ -20,23 +20,24 @@ Given a list of source videos, each with its duration **T**, and an ad sequence 
 ```terminal
 git clone https://github.com/lochappy/video_sequence_arrangement.git && cd video_sequence_arrangement
 ```
-**_Step 2_** - To run the unittest, in your terminal, input this command line.
+**_Step 2_** - To run the unittest for the recursive version, in your terminal, input this command line.
 ```terminal
 python3 test_video_sequence_arrangement.py
 ```
-**_Step 3_** - To run the demo, in your terminal, input this command line.
+**_Step 3_** - To run the demo for the recursive version, in your terminal, input this command line.
 ```terminal
 python3 video_sequence_arrangement.py -s ./data/sequence_of_scenes.txt -v ./data/video_list.txt
 ```
 **OR**
 
-**_Step 2_** - To run the unittest, in your terminal, input this command line.
+**_Step 2_** - To run the unittest for the loop version, in your terminal, input this command line.
 ```terminal
 python3 test_video_sequence_arrangement_loop.py
 ```
-**_Step 3_** - To run the demo, in your terminal, input this command line.
+**_Step 3_** - To run the demo for the loop version, in your terminal, input this command line.
 ```terminal
 python3 video_sequence_arrangement_loop.py -s ./data/sequence_of_scenes.txt -v ./data/video_list.txt
+```
 
 ## <b>III. Assumptions</b>
 - To maintain the order of the videos, I assume that the input format of video list is a list of tuples.
