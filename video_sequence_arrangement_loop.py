@@ -60,7 +60,7 @@ def foobar(video_list, sequence, start_index=0, list_of_selected_videos=[]):
         
         return True
 
-     # create all of the possible locations.
+    # create all of the possible locations.
     sequence_index = [list(range(len(sequence))) for _ in range(len(video_list))]
     possible_location_index = itertools.product(*sequence_index)
     
